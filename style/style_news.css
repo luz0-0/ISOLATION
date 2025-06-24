@@ -1,0 +1,94 @@
+body {
+background-image: url('../imgs/img_news/newsbg.png');
+background-size: cover;
+overflow: hidden;
+}
+
+.news-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 830px;      /* Tamaño fijo */
+    height: 400px;      /* Tamaño fijo */
+    padding: 48px 32px;
+    z-index: 2;
+    overflow-y: auto;   /* Scroll si el contenido es mayor */
+    box-sizing: border-box;
+}
+
+.newsletter-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1000;
+  background-image: url('../imgs/img_news/popupbg.png');
+  background-size:contain ;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  padding: 32px 24px 24px 24px;
+  max-width: 400px;
+  width: 90%;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+.newsletter-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  line-height: 0;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.newsletter-popup h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: transparent;
+}
+.newsletter-popup p {
+  margin-bottom: 18px;
+}
+.newsletter-popup input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  background: url('../imgs/img_news/label.png') no-repeat center center;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  color: #333;
+  font-family: inherit;
+  outline: none;
+}
+.newsletter-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.newsletter-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+  margin-top: 2px;
+}
+
+.newsletter-submit {
+  width: 100%;
+  background: none;
+  color: #fff;
+  padding: 14px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.5s;
+}

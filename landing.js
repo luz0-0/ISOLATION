@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hours = Math.floor((diff / (1000*60*60)) % 24);
     const mins = Math.floor((diff / (1000*60)) % 60);
     const secs = Math.floor((diff / 1000) % 60);
-    countdownEl.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+    countdownEl.textContent = `${days}d ${hours}:${mins}:${secs}`;
   }
   updateCountdown();
   setInterval(updateCountdown, 1000);
@@ -54,3 +54,16 @@ title_TID = setTimeout("title_pisi()", title_sp);
 }
 title_pisi()
 
+document.addEventListener('DOMContentLoaded', function() {
+  const nurseBtn = document.getElementById('nurseBtn');
+  const nurseTooltip = document.getElementById('nurseTooltip');
+  if (nurseBtn) {
+    nurseBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      nurseBtn.classList.add('show-tooltip');
+      setTimeout(() => {
+        nurseBtn.classList.remove('show-tooltip');
+      }, 1200);
+    });
+  }
+});

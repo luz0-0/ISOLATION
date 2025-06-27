@@ -17,9 +17,16 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 const linksAleatorios = [
-  'https://ejemplo1.com',
-  'https://ejemplo2.com',
-  'https://ejemplo3.com',
+  'https://www.kailashdeepakhospital.com/',
+  'https://www.karolinska.se/SplitPage',
+  'https://www.sgh.com.sg/',
+  'https://www.auh.dk/',
+  'https://www.samsunghospital.com/home/main/index.do',
+  'https://www.uzleuven.be/nl',
+  'https://www.hus.fi/en',
+  'https://www.comunidad.madrid/hospital/lapaz/'
+
+
 ];
 
 function abrirVentanaDados() {

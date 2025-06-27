@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #cccccc;
+    --item-bg: #f8f8f8;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    --item-bg: #111111;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    min-height: 100vh;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+}
+
+.header-left .logo {
+    height: 30px;
+}
+
+.checkout-header h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background-color: var(--item-bg);
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    opacity: 0.8;
+}
+
+.checkout-body {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 0;
+    min-height: calc(100vh - 80px);
+}
+
+.checkout-left {
+    padding: 30px;
+    border-right: 1px solid var(--border-color);
+}
+
+.checkout-right {
+    padding: 30px;
+    background-color: var(--item-bg);
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-btn {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.payment-btn:hover {
+    background-color: var(--item-bg);
+}
+
+.payment-btn.shop-pay {
+    background-color: #5a31f4;
+    color: white;
+    border-color: #5a31f4;
+}
+
+.payment-btn.paypal {
+    background-color: #ffc439;
+    color: #003087;
+    border-color: #ffc439;
+}
+
+.payment-btn.gpay {
+    background-color: #000;
+    color: white;
+    border-color: #000;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.divider span {
+    background-color: var(--bg-color);
+    padding: 0 15px;
+    color: #666;
+    font-size: 12px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.login-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus, .form-select:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.form-row .form-input,
+.form-row .form-select {
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--text-color);
+}
+
+.checkout-items {
+    margin-bottom: 20px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+.checkout-item-image {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border-color);
+    margin-right: 15px;
+    position: relative;
+}
+
+.item-quantity {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #666;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.checkout-item-details {
+    flex: 1;
+}
+
+.checkout-item-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.checkout-item-subtitle {
+    font-size: 10px;
+    color: #666;
+}
+
+.checkout-item-price {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.discount-section {
+    margin-bottom: 20px;
+}
+
+.discount-input {
+    display: flex;
+    gap: 0;
+}
+
+.discount-input .form-input {
+    flex: 1;
+    margin-bottom: 0;
+    border-right: none;
+}
+
+.apply-btn {
+    padding: 12px 20px;
+    background-color: var(--item-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.order-totals {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.total-final {
+    font-weight: 600;
+    font-size: 14px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.total-amount {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.currency {
+    font-size: 10px;
+    color: #666;
+}
+
+.shipping-info {
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .checkout-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkout-right {
+        border-top: 1px solid var(--border-color);
+        border-right: none;
+    }
+    
+    .checkout-left {
+        border-right: none;
+    }
+    
+    .payment-methods {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

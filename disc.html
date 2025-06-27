@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discografía</title>
+    <link rel="stylesheet" href="style/style_disc.css">
+    <script src="js/disc.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://web.archive.org/web/20040420033112/http://www.geocities.com/beebee2k4/crosssilverglowing.gif" type="image/png">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="imgs/img_disc/isologo.png" alt="Logo" class="band-logo">
+    </div>
+    
+    <div class="filters-container">
+        <div class="filter-checkboxes">
+            <label class="filter-item">
+                <input type="checkbox" id="all">
+                <span>TODO</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="lp">
+                <span>LP</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="ep">
+                <span>EP</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="single">
+                <span>SINGLE</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="misc">
+                <span>MISC</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="album-info-container">
+        <div class="album-info-content">
+            <div class="album-info-cover">
+                <img id="info-cover-img" src="" alt="Album Cover">
+            </div>
+            <div class="album-info-details">
+                <h3 id="info-title">Seleccionar los filtros para ordenar</h3>
+                <p id="info-description">Doble click en cualquier album para ver más info</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="albums-grid">
+            <div class="album-card" data-type="lp" data-title="titulo" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/36677-cover.jpeg" alt="Album 1">
+                </div>
+            </div>
+            <div class="album-card" data-type="ep" data-title="Kakuri Byoutou" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/54401-kakuri-byoutou-cover.jpg" alt="Album 2">
+                </div>
+            </div>
+            <div class="album-card" data-type="single" data-title="Unique" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/147189-unique-photo.jpg" alt="Album 3">
+                </div>
+            </div>
+            <div class="album-card" data-type="lp" data-title="Byouin no Kaidan" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/byouin-no-kaidan.jpeg" alt="Album 4">
+                </div>
+            </div>
+            <div class="album-card" data-type="ep" data-title="Byouin no Kaidan EP" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/-byouin-no-kaidan.jpg" alt="Album 5">
+                </div>
+            </div>
+            <div class="album-card" data-type="misc" data-title="Final Summit" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/final-summit.jpg" alt="Album 6">
+                </div>
+            </div>
+            <div class="album-card" data-type="lp" data-title="Iryou Shippai" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/iryou-shippai.jpg" alt="Album 7">
+                </div>
+            </div>
+            <div class="album-card" data-type="single" data-title="Kakuri Byoutou Single" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/kakuri-byoutou.jpg" alt="Album 8">
+                </div>
+            </div>
+            <div class="album-card" data-type="ep" data-title="Sequence Summit" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/sequence-summit.jpg" alt="Album 9">
+                </div>
+            </div>
+            <div class="album-card" data-type="misc" data-title="Shinsatsu Kiroku" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/img_disc/shinsatsu-kiroku.jpg" alt="Album 10">
+                </div>
+            </div>
+            <div class="album-card" data-type="lp" data-title="Album 11" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/album11.jpg" alt="Album 11">
+                </div>
+            </div>
+            <div class="album-card" data-type="single" data-title="Album 12" data-description="Lorem ipsum dolor sit amet consectetur">
+                <div class="album-cover">
+                    <img src="imgs/album12.jpg" alt="Album 12">
+                </div>
+            </div>
+        </div>
+    </div>
+     <footer class="footer">
+        <nav class="footer-nav">
+            <a href="menu.html" class="footer-link">MENÚ</a>
+            <span class="footer-separator">-</span>
+            <a href="tienda.html" class="footer-link">TIENDA</a>
+            <span class="footer-separator">-</span>
+            <a href="conciertos.html" class="footer-link">CONCIERTOS</a>
+            <span class="footer-separator">-</span>
+            <a href="debris.html" class="footer-link">DEBRIS</a>
+        </nav>
+    </footer>
+</body>
+</html>

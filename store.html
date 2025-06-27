@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+ ISOLATION - STORE</title>
+    <meta name="description" content="ISOLATION STORE">
+    <link rel="stylesheet" href="style/style_store.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <img src="imgs/img_store/isologo.png" alt="Logo" class="logo">
+            </div>
+            <div class="header-center">
+                <h2>TIENDA</h2>
+            </div>
+        <div class="header-right">
+                <button id="theme-toggle" class="theme-btn">⏾</button>
+                <button id="lang-toggle" class="lang-btn">ESP</button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <div class="filter-checkboxes">
+                <label><input type="checkbox" data-filter="all" checked> <span data-text="TODO">TODO</span></label>
+                <label><input type="checkbox" data-filter="destacado"> <span data-text="DESTACADO">DESTACADO</span></label>
+                <label><input type="checkbox" data-filter="musica"> <span data-text="MÚSICA">MÚSICA</span></label>
+                <label><input type="checkbox" data-filter="ropa"> <span data-text="ROPA">ROPA</span></label>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+        </div>
+    </div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3 data-text="SHOPPING_CART">SHOPPING CART</h3>
+            <button id="cart-close" class="cart-close">×</button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-count-text">
+                <span id="cart-items-count">0</span> <span data-text="PRODUCTS">PRODUCTS</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-text="TOTAL">TOTAL:</span> <span id="cart-total">$0.00</span>
+                </div>
+                <div class="cart-shipping">
+                    <span data-text="SHIPPING_TEXT">SHIPPING AND TAXES ARE CALCULATED AT CHECKOUT.</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" data-text="CHECKOUT">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+
+  <div id="floating-cart" class="floating-cart hidden">
+        <div class="cart-screws">
+            <img src="imgs/img_store/screw1.png" class="screw screw-tl" alt="">
+            <img src="imgs/img_store/screw2.png" class="screw screw-tr" alt="">
+            <img src="imgs/img_store/screw3.png" class="screw screw-bl" alt="">
+            <img src="imgs/img_store/screw4.png" class="screw screw-br" alt="">
+        </div>
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div class="cart-summary-info">
+                <span id="float-cart-items">0 items</span> - <span id="float-cart-total">$0.00</span>
+            </div>
+            <div class="cart-buttons">
+                <button id="float-checkout-btn" class="float-checkout-btn" data-text="CHECKOUT">CHECKOUT</button>
+                <button id="float-clear-btn" class="float-clear-btn">CLEAR</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="js/store.js"></script>
+</body>
+</html>

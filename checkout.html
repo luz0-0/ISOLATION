@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+ CAJA</title>
+    <meta name="description" content="ISOLATION CHECKOUT">
+    <link rel="stylesheet" href="style/checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <div class="header-left">
+                <img src="imgs/img_store/isologo.png" alt="Logo" class="logo">
+            </div>
+            <div class="header-right">
+                <button id="close-checkout" class="close-btn">×</button>
+            </div>
+        </div>
+        
+        <div class="checkout-body">
+            <div class="checkout-left">
+
+                
+                <!-- Contact Form -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <h3>Contacto</h3>
+                        <a href="#" class="login-link">Iniciar sesión</a>
+                    </div>
+                    <input type="email" placeholder="Email" class="form-input">
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked>
+                        <span>Deseo recibir noticias de + ISOLATION </span>
+                    </label>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Envío</h3>
+                    <select class="form-select">
+                        <option>País/Región</option>
+                        <option>Argentina</option>
+                        <option>Uruguay</option>
+                        <option>Paraguay</option>
+                    </select>
+                    <div class="form-row">
+                        <input type="text" placeholder="Nombre" class="form-input">
+                        <input type="text" placeholder="Apellido" class="form-input">
+                    </div>
+                    <input type="text" placeholder="Dirección" class="form-input">
+                    <input type="text" placeholder="Departamento, suite, etc. (optional)" class="form-input">
+                    <div class="form-row">
+                        <input type="text" placeholder="Ciudad" class="form-input">
+                        <select class="form-select">
+                            <option>Provincia/Estado</option>
+                        </select>
+                        <input type="text" placeholder="Código de área" class="form-input">
+                    </div>
+                    <input type="tel" placeholder="Teléfono" class="form-input">
+                </div>
+            <div class="form-section">
+                <h3>Pago</h3>
+                <button id="checkout-btn" class="checkout-btn" data-text="CHECKOUT">PAGAR</button>
+                </div>
+            </div>
+            
+            <div class="checkout-right">
+                <div class="order-summary">
+                    <div id="checkout-items" class="checkout-items">
+            
+                    </div>
+                    
+                    <div class="discount-section">
+                        <div class="discount-input">
+                            <input type="text" placeholder="Discount code" class="form-input">
+                            <button class="apply-btn">Ingresar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal • <span id="checkout-item-count">0 ítems</span></span>
+                            <span id="checkout-subtotal">$0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Envío</span>
+                            <span class="shipping-info">Ingresar dirección</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Total</span>
+                            <div class="total-amount">
+                                <span id="checkout-total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>

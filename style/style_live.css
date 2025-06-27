@@ -1,0 +1,168 @@
+::selection {
+background: pink;
+color: #FFFFFF;
+font-family: 'Times New Roman', Times, serif;
+}
+::-moz-selection {
+background: rgb(255, 210, 217);
+color: #FFFFFF;
+font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url('../imgs/img_live/bglive.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+.pizarra-container {
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    width: 55%;
+    height: 80%;
+    background-image: url('../imgs/img_live/pizarra.png');
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cartel {
+    padding: 15px 20px;
+    margin: 20px;
+    transform-origin: center;
+    min-width: 180px;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cartel:nth-child(1) {
+    transform: rotate(-15deg);
+    align-self: flex-start;
+    background-image: url('../imgs/img_live/tape1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.cartel:nth-child(2) {
+    transform: rotate(8deg);
+    align-self: flex-start;
+    margin-top: 40px;
+    background-image: url('../imgs/img_live/tape2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartel:nth-child(3) {
+    transform: rotate(-5deg);
+    align-self: center;
+    margin-top: 80px;
+    background-image: url('../imgs/img_live/tape3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartel:nth-child(4) {
+    transform: rotate(-15deg);
+    align-self: flex-start;
+    background-image: url('../imgs/img_live/tape1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartel:nth-child(5) {
+    transform: rotate(2deg);
+    align-self: flex-start;
+    margin-top: 40px;
+    background-image: url('../imgs/img_live/tape2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartel:nth-child(6) {
+    transform: rotate(-12deg);
+    align-self: center;
+    margin-top: 80px;
+    background-image: url('../imgs/img_live/tape3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartel h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cartel p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.cartel:hover {
+    transform: scale(1.1) rotate(0deg);
+    z-index: 10;
+}
+
+#header {
+        position: absolute;
+    top: 0px;
+    right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  color: red;
+  -webkit-text-stroke: 1px rgb(104, 0, 0);
+  font-size: 2em;
+}
+#rc {
+
+color: white;
+-webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    width: 65%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateY(-2px);
+}
